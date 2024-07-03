@@ -22,9 +22,6 @@ public class Gamerules {
     public static final GameRules.Key<GameRules.BooleanValue> CAN_HURT_PET_MOBS = GameRules
             .register("canHurtPetMobs", GameRules.Category.MOBS, GameRules.BooleanValue.create(true));
 
-    public static final GameRules.Key<GameRules.BooleanValue> CAN_PLAYER_SLEEP = GameRules
-            .register("canPlayerSleep", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-
     public static final GameRules.Key<GameRules.BooleanValue> CAN_PLAYER_TAKE_DAMAGE = GameRules
             .register("canPlayerTakeDamage", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 
@@ -79,9 +76,6 @@ public class Gamerules {
     public static final GameRules.Key<GameRules.IntegerValue> LIGHTNING_DAMAGE = GameRules
             .register("lightningDamage", GameRules.Category.PLAYER, GameRules.IntegerValue.create(-1));
 
-    public static final GameRules.Key<GameRules.IntegerValue> NATURAL_HUNGER = GameRules
-            .register("naturalHunger", GameRules.Category.PLAYER, GameRules.IntegerValue.create(-1));
-
     public static final GameRules.Key<GameRules.IntegerValue> POISON_HEALTH = GameRules
             .register("poisonHealth", GameRules.Category.PLAYER, GameRules.IntegerValue.create(1));
 
@@ -90,9 +84,6 @@ public class Gamerules {
 
     public static final GameRules.Key<GameRules.IntegerValue> RAW_MEAT_HUNGER = GameRules
             .register("rawMeatHunger", GameRules.Category.PLAYER, GameRules.IntegerValue.create(30));
-
-    public static final GameRules.Key<GameRules.IntegerValue> SKY_HIGH = GameRules
-            .register("skyHigh", GameRules.Category.MISC, GameRules.IntegerValue.create(-64));
 
     public static final GameRules.Key<GameRules.BooleanValue> STALACTITE_DAMAGE = GameRules
             .register("stalactiteDamage", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));

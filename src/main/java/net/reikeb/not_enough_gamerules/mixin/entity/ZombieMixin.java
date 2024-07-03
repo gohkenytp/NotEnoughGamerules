@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(Zombie.class)
 public abstract class ZombieMixin extends EntityMixin {
 
-    @Redirect(method = "wasKilled", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/RandomSource;nextBoolean()Z"))
+    @Redirect(method = "killedEntity", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/RandomSource;nextBoolean()Z"))
     private boolean removeBoolean(RandomSource instance) {
         float randomFloat = instance.nextFloat();
         float villagerConversion = (float) level().getGameRules().getInt(Gamerules.VILLAGER_CONVERSION) / 100;

@@ -8,8 +8,8 @@ import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -26,8 +26,8 @@ public class NotEnoughGamerules {
     public NotEnoughGamerules() {
 
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(new Gamerules());
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(new Gamerules());
+        NeoForge.EVENT_BUS.register(this);
     }
 
     public static DamageSource damageSource(Level level, String name) {

@@ -5,13 +5,13 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import net.reikeb.not_enough_gamerules.Gamerules;
 import net.reikeb.not_enough_gamerules.NotEnoughGamerules;
 
-@Mod.EventBusSubscriber(modid = NotEnoughGamerules.MODID)
+@EventBusSubscriber(modid = NotEnoughGamerules.MODID)
 public class PlayerUsesItemEvent {
 
     @SubscribeEvent

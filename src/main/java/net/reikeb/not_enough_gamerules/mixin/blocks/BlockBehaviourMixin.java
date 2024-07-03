@@ -23,9 +23,9 @@ public class BlockBehaviourMixin {
         if (!level.getGameRules().getBoolean(Gamerules.CAN_ENTITY_INTERACT_WITH_WORLD)) ci.cancel();
     }
 
-    @Inject(method = "use", at = @At("HEAD"), cancellable = true)
-    private void use(Level level, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
-        if (!level.getGameRules().getBoolean(Gamerules.CAN_ENTITY_INTERACT_WITH_BLOCK))
+    @Inject(method = "useWithoutItem", at = @At("HEAD"), cancellable = true)
+    private void use(Level pLevel, Player pPlayer, BlockHitResult pHitResult, CallbackInfoReturnable<InteractionResult> cir) {
+        if (!pLevel.getGameRules().getBoolean(Gamerules.CAN_ENTITY_INTERACT_WITH_BLOCK))
             cir.setReturnValue(InteractionResult.PASS);
     }
 }
